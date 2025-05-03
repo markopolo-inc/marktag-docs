@@ -56,6 +56,14 @@ export default defineConfig({
         ],
       },
       {
+        text: "Flutter",
+        items: [
+          { text: "Installation", link: "/flutter/installation" },
+          { text: "Identify User", link: "/flutter/identify-user" },
+          { text: "Usage", link: "/flutter/usage" },
+        ],
+      },
+      {
         text: "Web SDK",
         items: [
           { text: "Installation", link: "/web-sdk/installation" },
