@@ -6,7 +6,11 @@ The MarkTag endpoints allow you to generate and verify tracking implementations 
 
 ### Generate MarkTag {#generate}
 
-Generate tracking implementation details for a specific domain. If a MarkTag already exists for the domain type, returns the existing tag details.
+Generate tracking implementation details for a specific domain. The system automatically detects whether the domain is preverified (under your partner domain) or requires custom DNS setup.
+
+**Domain Types:**
+- **Preverified domains** - Subdomains under your partner domain with pre-configured CNAME. These activate instantly.
+- **Custom domains** - Merchant's own domains requiring CNAME setup and verification.
 
 **Endpoint:** `POST /v1/partners/marktag/generate`
 
@@ -90,15 +94,22 @@ curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/generate" \
 | 503 | `SERVICE_UNAVAILABLE` | External tag service unavailable |
 
 **Notes:**
-- The system automatically determines if the domain is preverified or requires server-side setup
+- **Preverified domains** (under your partner domain) activate instantly without DNS verification
+- **Custom merchant domains** require the merchant to add CNAME records and verify via the verification endpoint
+- The system automatically determines if the domain is preverified based on your partner configuration
 - If a MarkTag already exists for the merchant and domain type, the existing tag details are returned
-- Each merchant can have both a regular (serverSide) and a preverified MarkTag
+- Each merchant can have both preverified and custom domain MarkTags
 
 ---
 
 ### Verify MarkTag {#verify}
 
-Verify an existing MarkTag installation and update its status. This endpoint validates DNS configuration and marks the tag as verified.
+Verify an existing MarkTag installation and update its status. This endpoint is **only required for custom merchant domains** that need DNS verification. Preverified domains (under your partner domain) do not require this step.
+
+**When to use this endpoint:**
+- After a merchant adds CNAME records to their custom domain
+- To check if DNS propagation is complete
+- To activate tracking on custom merchant domains
 
 **Endpoint:** `POST /v1/partners/marktag/verify`
 
@@ -176,19 +187,28 @@ curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/verify" \
 
 ### Complete MarkTag Setup Flow
 
-The complete workflow for setting up a MarkTag involves:
+#### For Preverified Domains (Your Partner Domain)
+
+1. **Generate MarkTag** - Create a tracking implementation using a subdomain of your partner domain
+2. **Start Collecting Data** - MarkTag immediately begins tracking events (no DNS setup required)
+
+#### For Custom Merchant Domains
 
 1. **Generate MarkTag** - Create a tracking implementation for the merchant's domain
-2. **Configure DNS** - Add the provided CNAME record to the domain's DNS settings
+2. **Configure DNS** - Merchant adds the provided CNAME record to their domain's DNS settings
 3. **Wait for Propagation** - DNS changes typically take 5-30 minutes to propagate
-4. **Verify Installation** - Confirm the DNS configuration is correct
+4. **Verify Installation** - Use the verify endpoint to confirm DNS configuration
 5. **Start Collecting Data** - Once verified, MarkTag begins tracking events
 
 ## DNS Configuration Guide
 
-### Adding the CNAME Record
+### Partner Domain Setup (One-time during onboarding)
 
-After generating a MarkTag, you'll receive DNS configuration details. Here's how to add them to popular DNS providers:
+During onboarding with partners@markopolo.ai, you'll receive a CNAME record to add to your domain. This enables all preverified marktags under your domain.
+
+### Custom Merchant Domain Setup
+
+For merchants using their own domains, they'll need to add CNAME records after you generate their MarkTag:
 
 #### Example DNS Record
 ```

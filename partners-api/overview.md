@@ -86,13 +86,36 @@ Retrieve tracking events collected by MarkTag with filtering and pagination opti
 
 ## MarkTag Types
 
-### Server-Side Tags
-Regular domains that require DNS configuration. The merchant must add a CNAME record to their domain's DNS settings.
+### Preverified Tags (Partner Domains)
 
-### Preverified Tags
-Domains that already have the required DNS configuration. These can start collecting data immediately after generation.
+When you complete the onboarding process with partners@markopolo.ai:
+1. You'll receive a CNAME record to add to your domain
+2. This enables **preverified marktags** under your platform's domain
+3. These tags activate instantly without additional DNS verification
+4. Perfect for quick merchant onboarding on your platform
 
-The system automatically determines the appropriate tag type based on the domain.
+**Benefits:**
+- Instant marktag generation and activation
+- No DNS propagation delays
+- Immediate event tracking
+- Simplified merchant onboarding
+
+### Custom Domain Tags (Merchant Domains)
+
+For merchants requiring marktags on their own domains:
+1. Merchants must add CNAME records to their own domains
+2. Partners use the verification API to confirm DNS configuration
+3. Requires DNS propagation time (typically 5-30 minutes)
+4. Each domain needs individual verification
+
+**Process:**
+- Generate marktag for merchant's domain
+- Provide CNAME instructions to merchant
+- Wait for DNS propagation
+- Verify installation via API
+- Begin tracking events
+
+The system automatically determines the appropriate tag type based on whether the domain is preverified (under your partner domain) or requires custom setup.
 
 ## Security & Authentication
 
@@ -133,6 +156,24 @@ Common error codes:
 - Implement retry logic for temporary failures
 - Log errors for debugging
 - Provide clear feedback to merchants about installation status
+
+## Getting Started
+
+### Partner Onboarding
+
+To begin using the Partners API:
+
+1. **Contact Our Team** - Email partners@markopolo.ai to start the onboarding process
+2. **Business Discussion** - We'll learn about:
+   - Your platform and business model
+   - Integration requirements and use cases
+   - Expected merchant volume
+3. **Receive Credentials**:
+   - Partners API token (mp_live_*)
+   - CNAME record for your domain
+   - Integration documentation
+4. **Configure Domain** - Add the CNAME to enable preverified marktags
+5. **Start Integration** - Begin creating merchants and generating marktags
 
 ## Support
 

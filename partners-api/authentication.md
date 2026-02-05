@@ -85,12 +85,35 @@ The API automatically isolates data based on the authenticated partner:
 
 ## Getting Your API Token
 
-To obtain your API token:
+### Onboarding Process
 
-1. Contact Markopolo support at partners@markopolo.ai
-2. Provide your organization details and use case
-3. Receive your unique `mp_live_` prefixed token
-4. Store the token securely - it won't be shown again
+To obtain your API token and get started as a partner:
+
+1. **Initial Contact** - Reach out to partners@markopolo.ai
+2. **Business Review** - Our team will:
+   - Learn about your business and platform
+   - Understand your use cases and integration needs
+   - Discuss expected merchant volume and requirements
+3. **Receive Credentials** - You'll be provided with:
+   - Your unique Partners API token (prefixed with `mp_live_`)
+   - A CNAME record to add to your domain for preverified marktags
+   - Documentation and integration support
+4. **Domain Setup** - Configure the provided CNAME on your domain to enable instant marktag generation
+5. **Secure Storage** - Store your API token securely - it won't be shown again
+
+### Preverified Domain Benefits
+
+The CNAME record you receive during onboarding enables:
+- **Instant marktag activation** for domains under your platform
+- **No DNS verification delays** for your merchants
+- **Immediate event tracking** once marktags are generated
+
+### Important Notes
+
+- Your API token is tied to your partner account and domain configuration
+- The token provides access to all partner API endpoints
+- Keep your token confidential and never expose it in client-side code
+- If you need to support merchant custom domains, they'll require separate DNS setup and verification
 
 ## Troubleshooting
 

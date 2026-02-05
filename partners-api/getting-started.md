@@ -2,12 +2,40 @@
 
 This guide will help you make your first API calls and understand the basic workflow of integrating MarkTag into your platform.
 
-## Prerequisites
+## Prerequisites & Onboarding
 
-Before you begin, ensure you have:
-1. A Partners API token (starts with `mp_live_`)
+### Getting Started as a Partner
+
+To begin using the Partners API, you'll need to complete the onboarding process:
+
+1. **Contact Markopolo** - Reach out to partners@markopolo.ai
+2. **Business Review** - Our team will learn about your business and use cases
+3. **Receive API Credentials** - You'll receive:
+   - A Partners API token (starts with `mp_live_`)
+   - A CNAME record to add to your domain
+4. **Configure Your Domain** - Add the provided CNAME record to enable preverified marktags
+
+### Preverified Domain Setup
+
+During onboarding, you'll receive a CNAME record to add to your domain (e.g., `mtag.yourplatform.com` → `mtag.markopolo.ai`). This enables:
+- **Instant marktag generation** under your domain
+- **No additional DNS verification** required for tags under your domain
+- **Immediate event tracking** for your merchants
+
+### Custom Merchant Domains
+
+If your merchants require marktags on their own custom domains:
+- They must add CNAME records to their domains independently
+- You'll need to verify these domains using the verification API
+- Each custom domain requires individual DNS configuration
+
+### Technical Requirements
+
+Before making your first API call, ensure you have:
+1. Your Partners API token (mp_live_*)
 2. A REST client or programming environment
 3. Basic understanding of RESTful APIs
+4. Your domain CNAME configured (for preverified marktags)
 
 ## Integration Workflow
 

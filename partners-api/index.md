@@ -44,9 +44,20 @@ The Partners API is designed for platforms that want to integrate MarkTag as an 
 
 ## Quick Start
 
-### 1. Get API Access
+### 1. Get API Access & Complete Onboarding
 
-Contact your account manager or request access at [partners@markopolo.ai](mailto:partners@markopolo.ai)
+**Start the onboarding process:**
+1. Contact [partners@markopolo.ai](mailto:partners@markopolo.ai)
+2. Our team will learn about your business and use cases
+3. You'll receive:
+   - Your Partners API token (mp_live_*)
+   - A CNAME record to add to your domain
+4. Configure the CNAME on your domain to enable preverified marktags
+
+**Why the CNAME setup?**
+- Enables instant marktag generation under your domain
+- No DNS verification delays for your merchants
+- Immediate event tracking once tags are created
 
 ### 2. Authentication
 
@@ -113,10 +124,17 @@ https://api-alpha.markopolo.ai/v1/partners
 
 ## Integration Workflow
 
+### For Preverified Domains (Your Platform)
 1. **Create Merchant** - Register merchants under your partner account
-2. **Generate MarkTag** - Create tracking implementation for merchant's domain
-3. **Configure DNS** - Guide merchant through CNAME record setup
-4. **Verify Installation** - Validate DNS configuration is correct
+2. **Generate MarkTag** - Create tracking using your preverified domain
+3. **Start Tracking** - Immediately begin collecting events (no DNS wait)
+4. **Retrieve Data** - Access event data through the API
+
+### For Custom Merchant Domains
+1. **Create Merchant** - Register merchants under your partner account
+2. **Generate MarkTag** - Create tracking for merchant's custom domain
+3. **Configure DNS** - Merchant adds CNAME record to their domain
+4. **Verify Installation** - Use verification API to confirm DNS setup
 5. **Collect Events** - MarkTag begins tracking user interactions
 6. **Retrieve Data** - Access event data through the API
 
