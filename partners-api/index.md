@@ -54,7 +54,7 @@ Use Bearer token authentication with your API token:
 
 ```bash
 curl -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
-  https://api-alpha.markopolo.ai/api/v1/partners/merchant
+  https://api-alpha.markopolo.ai/v1/partners/merchant
 ```
 
 ### 3. Make Your First Call
@@ -62,7 +62,7 @@ curl -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
 Test your connection:
 
 ```bash
-curl -X GET https://api-alpha.markopolo.ai/api/v1/partners/merchant?limit=1 \
+curl -X GET https://api-alpha.markopolo.ai/v1/partners/merchant?limit=1 \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
@@ -102,7 +102,7 @@ curl -X GET https://api-alpha.markopolo.ai/api/v1/partners/merchant?limit=1 \
 
 ### Base URL
 ```
-https://api-alpha.markopolo.ai/api/v1/partners
+https://api-alpha.markopolo.ai/v1/partners
 ```
 
 ### Request/Response Format

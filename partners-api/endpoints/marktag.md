@@ -40,7 +40,7 @@ Content-Type: application/json
 
 **Example Request:**
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/generate" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/generate" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -131,7 +131,7 @@ Content-Type: application/json
 
 **Example Request:**
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/verify" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/verify" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

@@ -24,7 +24,7 @@ The typical integration follows these steps:
 First, verify your API token is working:
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/merchant?limit=1" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/merchant?limit=1" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
@@ -48,7 +48,7 @@ Expected response:
 Create a merchant account for a business:
 
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/merchant" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/merchant" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -70,7 +70,7 @@ Save this `merchantId` - you'll need it for subsequent operations.
 Create a tracking implementation for the merchant's domain:
 
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/generate" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/generate" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -111,7 +111,7 @@ This creates `mtag.example.com` pointing to `mtag.markopolo.ai`.
 After DNS propagation (usually 5-30 minutes), verify the configuration:
 
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/verify" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/verify" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -132,7 +132,7 @@ Response:
 Once verified, MarkTag begins collecting events. Retrieve them with:
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/events?merchantId=550e8400-e29b-41d4-a716-446655440000&limit=10" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/events?merchantId=550e8400-e29b-41d4-a716-446655440000&limit=10" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 

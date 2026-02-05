@@ -24,7 +24,7 @@ Authorization: Bearer mp_live_YOUR_TOKEN
 
 **Example Request:**
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/merchant?page=1&limit=10" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/merchant?page=1&limit=10" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
@@ -120,7 +120,7 @@ Content-Type: application/json
 
 **Example Request:**
 ```bash
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/merchant" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/merchant" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

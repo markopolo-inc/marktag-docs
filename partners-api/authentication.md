@@ -21,7 +21,7 @@ Authorization: Bearer mp_live_YOUR_TOKEN_HERE
 ### Example Request
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/merchant" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/merchant" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN_HERE"
 ```
 
@@ -68,7 +68,7 @@ Store your token in environment variables for security. Use your platform's stan
 Test your authentication setup with a simple request:
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/merchant?limit=1" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/merchant?limit=1" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN_HERE"
 ```
 

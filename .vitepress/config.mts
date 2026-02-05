@@ -138,13 +138,6 @@ export default defineConfig({
             { text: "Events", link: "/partners-api/endpoints/events" },
           ],
         },
-        {
-          text: "Resources",
-          collapsed: false,
-          items: [
-            { text: "Code Examples", link: "/partners-api/examples" },
-          ],
-        },
       ],
 
       // Default sidebar for other pages (if any)

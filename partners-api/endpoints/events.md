@@ -78,21 +78,21 @@ Retrieves events based on provided filters and pagination parameters.
 ### Get Recent Events
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/events?merchantId=YOUR_MERCHANT_ID&limit=20" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/events?merchantId=YOUR_MERCHANT_ID&limit=20" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
 ### Get Events for Date Range
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/events?merchantId=YOUR_MERCHANT_ID&startDate=2025-01-01T00:00:00Z&endDate=2025-01-31T23:59:59Z" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/events?merchantId=YOUR_MERCHANT_ID&startDate=2025-01-01T00:00:00Z&endDate=2025-01-31T23:59:59Z" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
 ### Get Specific Event Types
 
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/events?merchantId=YOUR_MERCHANT_ID&events=Purchase,AddToCart" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/events?merchantId=YOUR_MERCHANT_ID&events=Purchase,AddToCart" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 

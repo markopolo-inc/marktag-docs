@@ -6,7 +6,7 @@ The Partners API provides RESTful endpoints for managing merchants, MarkTag impl
 
 All API endpoints are relative to:
 ```
-https://api-alpha.markopolo.ai/api/v1/partners
+https://api-alpha.markopolo.ai/v1/partners
 ```
 
 ## Available Endpoints
@@ -169,32 +169,32 @@ All API operations are isolated to your partner account:
 
 ### Test Authentication
 ```bash
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/merchant?limit=1" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/merchant?limit=1" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
 ### Complete MarkTag Setup
 ```bash
 # 1. Create merchant
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/merchant" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/merchant" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"name": "My Store"}'
 
 # 2. Generate MarkTag
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/generate" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/generate" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"merchantId": "MERCHANT_ID", "domain": "example.com"}'
 
 # 3. Verify installation
-curl -X POST "https://api-alpha.markopolo.ai/api/v1/partners/marktag/verify" \
+curl -X POST "https://api-alpha.markopolo.ai/v1/partners/marktag/verify" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"tagId": "TAG_ID", "subdomain": "shop.example.com"}'
 
 # 4. Get events
-curl -X GET "https://api-alpha.markopolo.ai/api/v1/partners/events?merchantId=MERCHANT_ID" \
+curl -X GET "https://api-alpha.markopolo.ai/v1/partners/events?merchantId=MERCHANT_ID" \
   -H "Authorization: Bearer mp_live_YOUR_TOKEN"
 ```
 
