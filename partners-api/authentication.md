@@ -87,7 +87,7 @@ The API automatically isolates data based on the authenticated partner:
 
 To obtain your API token:
 
-1. Contact Markopolo support at r@markopolo.ai
+1. Contact Markopolo support at partners@markopolo.ai
 2. Provide your organization details and use case
 3. Receive your unique `mp_live_` prefixed token
 4. Store the token securely - it won't be shown again

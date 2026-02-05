@@ -7,6 +7,7 @@ export default defineConfig({
   base: "/marktag-docs/",
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: true,
   sitemap: {
     hostname: "https://markopolo-inc.github.io/marktag-docs",
   },

@@ -137,7 +137,7 @@ Common error codes:
 ## Support
 
 For API support or questions, contact the Markopolo support team:
-- Email: r@markopolo.ai
+- Email: partners@markopolo.ai
 - Documentation: This guide
 
 ## Next Steps

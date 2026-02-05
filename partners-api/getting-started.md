@@ -222,4 +222,4 @@ Now that you understand the basics:
 1. Explore the [API Reference](/marktag-docs/partners-api/endpoints/) for detailed endpoint documentation
 2. Implement error handling and monitoring
 3. Build your integration dashboard
-4. Contact support for production access: r@markopolo.ai
+4. Contact support for production access: partners@markopolo.ai
