@@ -46,7 +46,7 @@ The Partners API is designed for platforms that want to integrate MarkTag as an 
 
 ### 1. Get API Access
 
-Contact your account manager or request access at [r@markopolo.ai](mailto:r@markopolo.ai)
+Contact your account manager or request access at [partners@markopolo.ai](mailto:partners@markopolo.ai)
 
 ### 2. Authentication
 
@@ -129,7 +129,7 @@ https://api-alpha.markopolo.ai/api/v1/partners
 
 ## Support & Resources
 
-- **Email**: r@markopolo.ai
+- **Email**: partners@markopolo.ai
 - **Documentation**: Complete API reference and guides
 - **Integration Support**: Technical assistance for implementation
 
